@@ -19,40 +19,39 @@ The tutorial I followed is [here](http://codingxiaxw.cn/2016/12/07/60-mac-spark/
 > rm spark-2.0.0-bin-hadoop2.7.tgz  
 > Enter the configuration folder of spark `cd /usr/local/spark/conf` then `cp spark-env.sh.template spark-env.sh` and edit it  
 
-    ```Bash
-    export SCALA_HOME=/usr/local/scala
-    export SPARK_MASTER_IP=localhost
-    export SPARK_WORKER_MEMORY=4g
-    ```
+```Bash
+export SCALA_HOME=/usr/local/scala
+export SPARK_MASTER_IP=localhost
+export SPARK_WORKER_MEMORY=4g
+```
 
 ### Test
 
-+ 'spark-shell' & 'pyspark'
+'spark-shell' & 'pyspark'
 
-	```Bash
-	~/Documents/cs502-1702/mingdimao(master*) » pyspark                                             mingdimao@LeoMacBookPro
-	Python 2.7.13 (default, Dec 18 2016, 07:03:39) 
-	[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
-	Type "help", "copyright", "credits" or "license" for more information.
-	Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
-	Setting default log level to "WARN".
-	To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-	17/05/13 13:57:40 WARN SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
-	17/05/13 13:57:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-	17/05/13 13:57:47 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
-	17/05/13 13:57:47 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
-	17/05/13 13:57:48 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
-	Welcome to
-	      ____              __
-	     / __/__  ___ _____/ /__
-	    _\ \/ _ \/ _ `/ __/  '_/
-	   /__ / .__/\_,_/_/ /_/\_\   version 2.1.0
-	      /_/
-
-	Using Python version 2.7.13 (default, Dec 18 2016 07:03:39)
-	SparkSession available as 'spark'.
-	>>> 
-	```
+```Bash
+~/Documents/cs502-1702/mingdimao(master*) » pyspark                                             mingdimao@LeoMacBookPro
+Python 2.7.13 (default, Dec 18 2016, 07:03:39) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+17/05/13 13:57:40 WARN SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
+17/05/13 13:57:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/05/13 13:57:47 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+17/05/13 13:57:47 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+17/05/13 13:57:48 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 2.1.0
+      /_/
+Using Python version 2.7.13 (default, Dec 18 2016 07:03:39)
+SparkSession available as 'spark'.
+>>> 
+```
 
 # Operation and Transformation
 
@@ -63,7 +62,7 @@ The tutorial I followed is [here](http://codingxiaxw.cn/2016/12/07/60-mac-spark/
 > **count = data.count()**  
 > Spark will count the number of records  
 
-```
+```Bash
 >>> rawdata = range(0,100)
 >>> rawdata
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]

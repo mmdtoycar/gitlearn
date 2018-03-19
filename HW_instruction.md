@@ -58,7 +58,7 @@ Branch 'test' set up to track remote branch 'test' from 'origin'.
 ![submission succeeded](pic/branch.png)  
 现在, 点击branch的名字, 你就可以看到自己已提交的作业内容了
 
-##2. 如果老师更新了一份新的作业，我该如何同步呢？
+## 2. 如果老师更新了一份新的作业，我该如何同步呢？
 比如, 老师添加了一次新的作业, 名字是week2
 ![new homework](pic/hw.png)  
 ```bash

@@ -81,3 +81,9 @@ Merge made by the 'recursive' strategy.
  create mode 100644 week2/hw2.java
 ```
 这样就获得了最新的代码，接下来就可以开始第二次的作业啦！～
+
+---
+
+Reference:  
+1. [week0 Git 学习及使用指南](https://docs.google.com/document/d/15su2LzPkABIF4FEpbLoa5G29a9YJgLOdRKcFzDrBg4g/edit)  
+2.  [git - 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
